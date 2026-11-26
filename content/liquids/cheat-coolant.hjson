@@ -1,0 +1,13 @@
+{
+    name: "cheat-coolant"
+    localizedName: "Cheat Coolant"
+    description: "Well, You cannot get this without cheats"
+    color: "ff88ff"
+    effect: "freezing"
+    explosiveness: "0.0"
+    flammability: "0.0"
+    heatCapacity: "999.0"
+    viscosity: "0.001"
+    temperatire: "-1.0"
+    hidden: true
+}

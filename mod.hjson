@@ -1,0 +1,8 @@
+{
+    name: "super-overdrive"
+    displayName: "Super Overdrive Mod"
+    author: "k-sus"
+    description: "Have you ever wannted MORE?\nThis mod is right for you!\nFerturing 'sand to everything', a new overdrive, better coolant and more.\n\nTo be extended and improved"
+    version: "0.1"
+    minGameVersion: "160"
+}

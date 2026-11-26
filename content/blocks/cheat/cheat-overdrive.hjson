@@ -1,0 +1,52 @@
+//{
+//    type: "OverdriveProjector"
+//    name: "cheat-overdrive"
+//    localizedName: "CHeat Overdrive"
+//    description: "Imagine you want to cheat. here you go brother"
+//    health: 999999
+//    size: 1
+//    range: 500
+//    speedBoost: 200.0
+//    useTime: 1
+//    hasItems: false
+//    hasLiquids: false
+//    
+//    requirements: [
+//        
+//    ]
+//    category: "effect"
+//    research: "overdrive-dome"
+//    squareRegion: false//
+
+//    hasboost: false//
+
+//    hasItems: true
+//    hasLiquids: true
+//    itemCapacity: 20
+//    liquidCapacity: 180//
+
+//    consumes: {
+//        
+//    }
+//    buildVisibility: "sandboxOnly"
+//}
+
+{
+    type: "OverdriveProjector"
+    name: "cheat-overdrive"
+    localizedName: "Cheat Overdrive"
+    description: "Imagine you want to cheat. here you go brother"
+    health: 999999
+    size: 1
+    range: 500
+    speedBoost: 200.0
+    useTime: 1
+    hasItems: false
+    hasLiquids: false
+    hasBoost: false
+    squareRegion: false
+
+    requirements: []
+    category: "effect"
+    buildVisibility: "sandboxOnly"
+}

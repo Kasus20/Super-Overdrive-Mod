@@ -1,0 +1,65 @@
+{
+  type: "Separator"
+  name: "so-sand-filter"
+  localizedName: "Sand Filter"
+  description: "Sand contains various of basic ressources. Use this basic filter to vollect useful particles."
+  health: 50
+  size: 1
+  hasPower: true
+  hasLiquids: false
+  hasItems: true
+
+  itemCapacity: 30
+
+  craftTime: 120
+
+  consumes: {
+    power: 0.1
+    items: [
+
+      sand/15
+    ]
+  }
+
+  results: [
+    coal/75
+    graphite/10
+    metaglass/10
+    silicon/5
+  ]
+
+  requirements: [
+    copper/25
+    lead/30
+  ]
+  category: "crafting"
+  research: "pulverizer"
+
+  drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawPistons"
+        suffix: "-piston"
+        angleOffset: 90
+        sides: 4
+        lenOffset: -0.12
+        sinMag: 0.6
+        sinScl: 5.0
+        sinOffset: 0.0
+      }
+      {
+        type: "DrawDefault"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-glow"
+        glowScale: 2.5
+      }
+    ]
+  }
+}

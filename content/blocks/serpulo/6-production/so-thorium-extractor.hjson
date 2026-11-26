@@ -1,0 +1,89 @@
+{
+  type: "GenericCrafter"
+  name: "so-thorium-extractor"
+  localizedName: "Thorium Extractor"
+  description: "Extracts thorium from sand using fire and water. To operate properly, its fragile plastanium microstructures need to be replaced. Requires cryofluid to not melt the plastic components."
+  health: 560
+  size: 3
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  rotate: false
+  
+  craftTime: 30
+  
+  requirements: [
+    lead/200
+    graphite/120
+    titanium/250
+    silicon/360
+    plastanium/160
+  ]
+  category: "crafting"
+  research: "cryofluid-mixer"
+
+  itemCapacity: 40
+  liquidCapacity: 120
+
+  consumes: {
+    power: 16
+    liquids: [
+      {
+        liquid: "water"
+        amount: 4.999
+      }
+      {
+        liquid: "cryofluid"
+        amount: 1.916
+      }
+    ]
+    items: [
+      plastanium/2
+      pyratite/1
+      sand/10
+    ]
+  }
+  
+  drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "water"
+        padding: 1
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "cryofluid"
+        padding: 2
+      }
+      {
+        type: "DrawRegion"
+        suffix: "-chamber"
+      }
+      {
+        type: "DrawDefault"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-glow"
+        glowScale: 2.5
+        glowIntensity: 0.4
+        color: "ffffff"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-melt"
+        glowScale: 10.0
+        glowIntensity: 1.0
+        color: "ffffff"
+      }
+    ]
+  }
+  
+  outputItem: thorium/1
+}

@@ -1,0 +1,14 @@
+{
+    name: "so-hypercoolant"
+    localizedName: "Hypercoolant"
+    description: "Imagine cryofluid but better. Using unstable plastanium - surge links increases its capacity dramatically."
+    color: "9000ff"
+    lightColor: "9000ff55"
+    effect: "freezing"
+    explosiveness: "0.0"
+    flammability: "0.0"
+    heatCapacity: "3.0"
+    viscosity: "0.1"
+    temperatire: "-0.5"
+    research: "cryofluid"
+}

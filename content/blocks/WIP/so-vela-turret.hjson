@@ -1,0 +1,66 @@
+type: LaserTurret
+name: Vela Turret
+description: Fires a continuous green thermal beam that melts enemies and repairs allied structures.
+
+size: 3
+health: 2200
+range: 180
+reload: 90
+shootDuration: 160 // How long the beam stays active (in ticks; 160 = ~2.6 seconds)
+firingMoveSlowdown: 0.25 // Slows turret rotation while firing
+rotateSpeed: 2.0
+recoil: 3
+shake: 1
+
+// Sound effects matching Vela / Meltdown style
+shootSound: beam
+loopSound: beam
+loopSoundVolume: 1.5
+
+// Power and coolant consumption
+consumes: {
+  power: 14
+  coolant: {
+    amount: 0.4
+    optional: true
+  }
+}
+
+// Vela's continuous healing/damage beam
+shootType: {
+  type: ContinuousLaserBulletType
+  damage: 35 // Damage per tick interval (matches Vela's exact base damage)
+  length: 180
+  width: 6
+  drawSize: 420
+  lifetime: 160
+  shake: 1
+  
+  // Healing properties (allows the beam to repair friendly blocks)
+  collidesTeam: true
+  healPercent: 1.5
+  
+  // Status & visual effects
+  status: melting
+  statusDuration: 120
+  hitEffect: hitMeltHeal
+  hitColor: 98ffa9
+  
+  // Vela's green laser color palette (outer to inner core)
+  colors: [
+    "62ae7f55"
+    "84f49199"
+    "98ffa9"
+    "ffffff"
+  ]
+}
+
+requirements: [
+  copper/600
+  lead/450
+  silicon/350
+  plastanium/200
+  phase-fabric/100
+]
+category: turret
+research: meltdown

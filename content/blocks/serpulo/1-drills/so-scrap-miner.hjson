@@ -1,0 +1,65 @@
+{
+  type: "AttributeCrafter"
+  name: "so-scrap-extractor"
+  localizedName: "Scrap Extractor"
+  description: "Uses insane amounts of power and water to extract scrap from deep under the surface. Requires soft or warm floor tiles to operate"
+  health: 650
+  size: 4
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  itemCapacity: 30
+  liquidCapacity: 150
+
+  craftTime: 120
+  outputItem: "scrap/6"
+
+  attribute: "oil"
+  baseEfficiency: 0.0
+  minEfficiency: 0.3
+  maxBoost: 1.5
+  boostScale: 1.0
+  displayEfficiency: true
+
+  consumes: {
+    power: 8.33333333
+    liquid: {
+      liquid: "water"
+      amount: 1
+    }
+  }
+
+  requirements: [
+    copper/70
+    metaglass/60
+    titanium/40
+    silicon/60
+
+  ]
+  category: "production"
+  research: "laser-drill"
+
+  drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawRegion"
+        suffix: "-rotator"
+        spinSprite: true
+        rotateSpeed: 5
+      }
+      {
+        type: "DrawDefault"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-glow"
+        glowScale: 5
+      }
+    ]
+  }
+}

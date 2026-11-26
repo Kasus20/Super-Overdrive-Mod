@@ -1,0 +1,95 @@
+{
+  type: "ConsumeGenerator"
+  name: "so-phase-link-reactor"
+  localizedName: "Phase Link Reactor"
+  description: "Unleashes the full potential of phase power. Requires HUGE amounts of hypercoolant and returns water. Leaving the water in there will clog up the cooling mechanism and overheat the reactor."
+  health: 1400
+  size: 4
+  hasPower: true
+  hasItems: true
+  itemCapacity: 50
+
+  powerProduction: 250
+
+  itemDuration: 600
+
+  consumes: {
+    items: [
+      phase-fabric/1
+    ]
+      liquid: {
+      liquid: "so-hypercoolant"
+      amount: 1.5
+    }
+  }
+
+  requirements: [
+    silicon/650
+    graphite/300
+    thorium/250
+    plastanium/250
+    surge-alloy/120
+    phase-fabric/30
+  ]
+
+  category: "power"
+  research: "impact-reactor"
+
+  outputLiquid: water/1.5
+  explodeOnFull: true
+
+  drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "so-hypercoolant"
+        padding: 2
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "water"
+        color: "ff3333"
+        padding: 2
+      }
+      {
+        type: "DrawRegion"
+        suffix: "-chamber"
+      }
+      {
+        type: "DrawRegion"
+        suffix: "-rotator"
+        spinSprite: true
+        rotateSpeed: 10
+        glowScale: 1.0
+        glowIntensity: 0.8
+        color: "ffffff"
+      }
+      {
+        type: "DrawRegion"
+        suffix: "-dimmer"
+      }
+      {
+        type: "DrawDefault"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-glow"
+        glowScale: 2.5
+        glowIntensity: 0.4
+        color: "ffffff"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-beam"
+        glowScale: 10.0
+        glowIntensity: 0.4
+        color: "ffffff"
+      }
+    ]
+  }
+}

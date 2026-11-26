@@ -1,0 +1,68 @@
+{
+  type: "GenericCrafter"
+  name: "so-hypercoolant-synthesizer"
+  localizedName: "Hypercoolant Synthesizer"
+  description: "Mixes Cryofluid, Plastanium, and Surge Alloy into advanced Hypercoolant."
+  health: 180
+  size: 2
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+  rotate: false
+  
+  craftTime: 180
+  
+  requirements: [
+    copper/200
+    titanium/120
+    lead/160
+    silicon/360
+    surge-alloy/150
+  ]
+  category: "crafting"
+  research: "cryofluid-mixer"
+
+  itemCapacity: 30
+  liquidCapacity: 120
+
+  consumes: {
+    power: 14.0
+    liquid: {
+      liquid: "cryofluid"
+      amount: 0.3
+    }
+    items: [
+      plastanium/10
+      phase-fabric/1
+    ]
+  }
+  
+  drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "cryofluid"
+        padding: 2
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "so-hypercoolant"
+        padding: 2
+      }
+      {
+        type: "DrawRegion"
+        suffix: "-glass"
+      }
+      {
+        type: "DrawDefault"
+      }
+    ]
+  }
+  
+  outputLiquid: "so-hypercoolant/0.3"
+}

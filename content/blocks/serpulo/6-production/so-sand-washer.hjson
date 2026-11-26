@@ -1,0 +1,72 @@
+{
+  type: "Separator"
+  name: "so-sand-washer"
+  localizedName: "Sand Washer"
+  description: "Sand contains various of basic ressources. Use water to wash them out. Requires a huge amount of sand and water"
+  health: 180
+  size: 2
+  hasPower: true
+  hasLiquids: true
+  hasItems: true
+
+  itemCapacity: 60
+  liquidCapacity: 30
+
+  craftTime: 60
+
+  consumes: {
+    power: 1
+    items: [
+
+      sand/15
+    ]
+    liquid: {
+      liquid: "water"
+      amount: 1.0
+    }
+  }
+
+  results: [
+    coal/60
+    graphite/25
+    silicon/10
+    titanium/5
+  ]
+
+  requirements: [
+    copper/65
+    lead/45
+    graphite/30
+  ]
+  category: "crafting"
+  research: "so-sand-washer"
+
+  drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "water"
+        padding: 1
+      }
+      {
+        type: "DrawRegion"
+        suffix: "-rotator"
+        spinSprite: true
+        rotateSpeed: 2.5
+      }
+      {
+        type: "DrawDefault"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-glow"
+        glowScale: 2.5
+      }
+    ]
+  }
+}

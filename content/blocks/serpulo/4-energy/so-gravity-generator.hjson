@@ -1,0 +1,56 @@
+{
+  type: "ConsumeGenerator"
+  name: "so-gravity-generator"
+  localizedName: "Gravity Generator"
+  description: "Uses the gravity on heavy lead to generate a relatively small amount of power. In order to match with enthropy, the items must be destroyed afterwards"
+  health: 20
+  size: 1
+  hasPower: true
+  hasItems: true
+  itemCapacity: 5
+
+  powerProduction: 0.0333
+
+  itemDuration: 600
+
+  consumes: {
+    items: [
+      lead/1
+    ]
+  }
+
+  requirements: [
+    copper/25
+    lead/15
+  ]
+  category: "power"
+  research: "combustion-generator"
+
+  drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawPistons"
+        suffix: "-piston"
+        angleOffset: 90
+        sides: 4
+        lenOffset: -0.12
+        sinMag: 0.6
+        sinScl: 5.0
+        sinOffset: 0.0
+      }
+      {
+        type: "DrawDefault"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-glow"
+        glowScale: 2.5
+      }
+    ]
+  }
+}

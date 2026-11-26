@@ -1,0 +1,55 @@
+{
+  type: "ThermalGenerator"
+  name: "er-enhanced-turbine-condensator"
+  localizedName: "Advanced Turbine Condensator"
+  description: "Through sharpened tungsten blades and enhanced silicon contacts, this Turbine condensator generates a remarkable amount of extra energy, compared to the base version"
+  health: 725
+  size: 3
+  hasPower: true
+  hasItems: false
+  hasLiquids: true
+  liquidCapacity: 30
+
+  powerProduction: 0.5
+
+  outputsLiquid: true
+  outputLiquid: water/0.02
+
+  attribute: steam
+  minEfficiency: 8.99
+  displayEfficiencyScale: 0.1111112
+  displayEfficiency: false
+
+  requirements: [
+    silicon/120
+    beryllium/60
+    graphite/20
+    tungsten/80
+  ]
+
+  drawer: {
+    type: DrawMulti
+    drawers: [
+      {
+        type: DrawRegion
+        suffix: "-bottom"
+      }
+      {
+        type: DrawLiquidTile
+        drawLiquid: "water"
+        padding: 1.5
+      }
+      {
+        type: DrawDefault
+      }
+      {
+        type: DrawBlurSpin
+        suffix: -rotator
+        rotateSpeed: 12
+      }
+    ]
+  }
+
+  category: "power"
+  research: "turbine-condensator"  
+}

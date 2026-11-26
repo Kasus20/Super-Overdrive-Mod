@@ -1,0 +1,69 @@
+{
+    type: "OverdriveProjector"
+    name: "so-overdrive-renderer"
+    localizedName: "Overdrive Renderer"
+    description: "Massively increases nearby structure operation speed. Beware of high supply cost"
+    health: 1200
+    size: 5
+    range: 300
+    speedBoost: 5.25
+    useTime: 600
+    
+    requirements: [
+        lead/350
+        graphite/450
+        titanium/400
+        silicon/300
+        plastanium/250
+        surge-alloy/300
+        phase-fabric/250
+    ]
+
+    category: "effect"
+    research: "overdrive-dome"
+    squareRegion: false
+
+    hasboost: false
+
+    hasItems: true
+    hasLiquids: true
+    itemCapacity: 20
+    liquidCapacity: 180
+
+    consumes: {
+        power: 41
+        liquid: {
+            liquid: "cryofluid"
+            amount: 0.6
+        }
+        items: [
+            phase-fabric/4
+            silicon/6
+            surge-alloy/1
+        ]
+    }
+
+    drawer: {
+    type: "DrawMulti"
+    drawers: [
+      {
+        type: "DrawRegion"
+        suffix: "-bottom"
+      }
+      {
+        type: "DrawLiquidTile"
+        drawLiquid: "cryofluid"
+        padding: 0
+        
+      }
+      {
+        type: "DrawDefault"
+      }
+      {
+        type: "DrawGlowRegion"
+        suffix: "-glow"
+        glowScale: 10
+      }
+    ]
+  }
+}
